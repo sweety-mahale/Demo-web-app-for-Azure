@@ -6,9 +6,9 @@
 ?>
 
 <?php
-      $host = "dbutt.mysql.database.azure.com";
-    $username = "baoanhhihi";
-    $password = "Vuchien@123";
+      $host = "myserver123.mysql.database.azure.com";
+    $username = "Sweety";
+    $password = "mahale@23";
     $database = "utt";
 
 
