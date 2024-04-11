@@ -1,7 +1,7 @@
 <?php
-$host = 'dbutt.mysql.database.azure.com';
-$username = 'baoanhhihi';
-$password = 'Vuchien@123';
+$host = 'myserver123.mysql.database.azure.com';
+$username = 'Sweety';
+$password = 'mahale@23';
 $db_name = 'utt';
 
 //Establishes the connection
@@ -12,8 +12,8 @@ if (mysqli_connect_errno($conn)) {
 die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
-$User = 'vuchien';
-$Password= '12345';
+$User = 'Sweety';
+$Password= '1234';
 $id='1';
 
 if($stmt = mysqli_prepare($conn, "INSERT INTO account (User, Password, id) VALUES (? , ? , ?)")){
