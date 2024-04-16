@@ -85,8 +85,8 @@ ini_set('display_errors', '0');
                     <div class="container__information--row"> 
                         <div class="container__information--title">Semester:</div>
                        <select class="container__information--semester" name="Product_Type" >
-                            <option value="">2022_2023_1</option>
-                            <option value="">2023_2024_2</option>
+                            <option value="">2022_2023</option>
+                            <option value="">2023_2024</option>
                           </select>
                     </div>
                 </div>
@@ -215,7 +215,7 @@ ini_set('display_errors', '0');
 
                   <?php
                   // Chuẩn bị câu lệnh SQL
-                  $stmt = $conn->prepare("SELECT * FROM `2022-2023_2` WHERE id = ?");
+                  $stmt = $conn->prepare("SELECT * FROM `2023-24` WHERE id = ?");
 
                   // Gán giá trị cho tham số
                   $id = $_SESSION['id'];
