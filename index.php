@@ -16,7 +16,7 @@
     $conn = new mysqli($host, $username, $password, $database);
     // Kiểm tra kết nối
     if ($conn->connect_error) {
-        die("Kết nối tới cơ sở dữ liệu thất bại: " . $conn->connect_error);
+        die("Connection to database failed: " . $conn->connect_error);
     }
 ?>
 
@@ -27,7 +27,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/index.css">
-    <title>Trang chủ</title>
+    <title>Home page</title>
 </head>
 
 
@@ -50,19 +50,19 @@ ini_set('display_errors', '0');
         <div class="header">
             <div class="header__title">
                 <div class="header__title__description" style="color: #fff;">
-                    TRƯƠNG ĐẠI HỌC CÔNG NGHỆ GTVT
+                    National Institute of technology Tiruchirappalli
                 </div>
 
                 <div class="header__title__user">
-                    <h3>Sinh Viên: <?php echo $row['Name'] ?></h3>
+                    <h3>Student: <?php echo $row['Name'] ?></h3>
                 </div>
 
             </div>
             <div class="header__system">
-                <a href="" class="header__system__link">Trang chủ</a>
-                <a href="logout.php" class="header__system__link">Đăng xuất</a>
-                <a href="" class="header__system__link">hỏi đáp</a>
-                <a href="" class="header__system__link">Trợ giúp</a>
+                <a href="" class="header__system__link">Home page</a>
+                <a href="logout.php" class="header__system__link">Log out</a>
+                <a href="" class="header__system__link">Q & A</a>
+                <a href="" class="header__system__link">Help</a>
                 <select class="header__system__link-op" name="Product_Type" >
                     <option value="">VN</option>
                     <option value="">EN</option>
@@ -75,7 +75,7 @@ ini_set('display_errors', '0');
             <div class="container__information">
                 <div class="container__information--col">
                     <div class="container__information--row"> 
-                        <div class="container__information--title">Mã Sinh Viên:</div>
+                        <div class="container__information--title">Student code:</div>
                         <div class="container__information--id"><?php echo $row['Student_id'] ?></div>
                     </div>
                     <div class="container__information--row"> 
@@ -83,12 +83,10 @@ ini_set('display_errors', '0');
                         <div class="container__information--department"><?php echo $row['Department'] ?></div>
                     </div>
                     <div class="container__information--row"> 
-                        <div class="container__information--title">Học kì:</div>
+                        <div class="container__information--title">Semester:</div>
                        <select class="container__information--semester" name="Product_Type" >
-                            <option value="">2021_2022_1</option>
-                            <option value="">2021_2022_2</option>
                             <option value="">2022_2023_1</option>
-                            <option value="">2022_2023_2</option>
+                            <option value="">2023_2024_2</option>
                           </select>
                     </div>
                 </div>
@@ -97,17 +95,17 @@ ini_set('display_errors', '0');
             
                 <div class="container__information--col">
                     <div class="container__information--row"> 
-                        <div class="container__information--title">Họ tên:</div>
+                        <div class="container__information--title">Full name:</div>
                         <div class="container__information--name"><?php echo $row['Name'] ?></div>
                     </div>
                     <div class="container__information--row"> 
-                        <div class="container__information--title">Ngành: </div>
+                        <div class="container__information--title">Branch: </div>
                         <div class="container__information--specialized"><?php echo $row['Specialized'] ?></div>
                     </div>
                     <div class="container__information--row"> 
-                        <div class="container__information--title">Lọc:</div>
+                        <div class="container__information--title">Filter:</div>
                         <select class="container__information--semester" name="Product_Type" >
-                            <option value="">Xem những học phần có diểm </option>
+                            <option value="">See which modules have points </option>
                             <option value="">EN</option>
                           </select>
                     </div>
@@ -115,11 +113,11 @@ ini_set('display_errors', '0');
 
                 <div class="container__information--col">
                     <div class="container__information--row"> 
-                        <div class="container__information--title">Trạng thái:</div>
-                        <div class="container__information--status">Đang học</div>
+                        <div class="container__information--title>:</div>
+                        <div class="container__information--status">Studying</div>
                     </div>
                     <div class="container__information--row"> 
-                        <div class="container__information--title">Lớp: </div>
+                        <div class="container__information--title">Class: </div>
                         <div class="container__information--class"><?php echo $row['Class'] ?></div>
                     </div>
                 </div>
@@ -130,10 +128,10 @@ ini_set('display_errors', '0');
                 <table width="100%" align="center" border="1" style="border-collapse: collapse;">
                     <tbody>
                       <tr>
-                        <td class="container__scores__header">Năm học</td>
-                        <td class="container__scores__header">Học kỳ</td>
-                        <td class="container__scores__header">TBTL Hệ 10 N1</td>
-                        <td class="container__scores__header">TBTL Hệ 10 N2</td>
+                        <td class="container__scores__header">School year</td>
+                        <td class="container__scores__header">Semester</td>
+                        <td class="container__scores__header">TBTL System 10 N1</td>
+                        <td class="container__scores__header">TBTL System 10 N2</td>
                         <td class="container__scores__header">TBTL Hệ 4 N1</td>
                         <td class="container__scores__header">TBTL Hệ 4 N2</td>
                         <td class="container__scores__header">Số TCTL N1</td>
@@ -249,7 +247,7 @@ ini_set('display_errors', '0');
                   }
                   ?>
 
-                  <h3>BẢNG ĐIỂM CHI TIẾT</h3>
+                  <h3>DETAILED SCORE SHEET</h3>
                   <table width="100%" align="center" border="1" style="border-collapse: collapse;">
                     <tbody>
                       <tr>
